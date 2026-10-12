@@ -3,6 +3,32 @@
 //
 // Then implement the trait for `u32` and `i32`.
 
+trait U32 {
+    fn is_even(self) -> bool;
+}
+
+impl U32 for u32 {
+    fn is_even(self) -> bool {
+        if self % 2 == 0 {
+            return true
+        }
+        return false
+    }
+}
+
+trait I32 {
+    fn is_even(self) -> bool;
+}
+
+impl I32 for i32 {
+    fn is_even(self) -> bool {
+        if self % 2 == 0 {
+            return true
+        }
+        return false
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
